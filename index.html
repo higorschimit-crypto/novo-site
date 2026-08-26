@@ -54,9 +54,10 @@
         <p class="artigo-autor">Por: Higor Schimit</p>
         <p>O Colégio Rural Estadual de Pinhalzinho, fica em uma comunidade no interior da cidade do Rio Bonito do Iguaçu no Paraná, Entre os trabalhos desenvolidos, destaca-se os indicies alcançados nos ultimos anos com IDEB, prova paraná e tambem a aprovação de alunos formados em diversos vestibulares do Estado.</p>
     <button>❤️<span>0</span></button>
-    <button> 👍🏽<span></span></button>
+    <button> 👍🏽<span>0</span></button>
     <article>
-    <img src="" alt="">
+        <img src="14a88bec3a06428f776608f25cba96ac0dd86875 (1).webp" alt="">
+
 
      <div>
      <h2>segundo poste</h2>
@@ -65,7 +66,7 @@
      <p>Aqui vou dar dicas de estudos </p>
 
      <button>❤️<span>0</span></button>
-    <button> 👍🏽<span></span></button>
+    <button> 👍🏽<span>0</span></button>
 
 
 
@@ -79,6 +80,20 @@
 
 <script>
     const botoẽs = document.querySelectorAll("button");
-    botoẽs.forEach(function(botão))
+    botoẽs.forEach(function(botão) { 
+      let curtiu = false;
+      botão.addeEventlistener("click", botãoClicado);
+      function botãoClicado() {
+        console.log("fui clicado");
+        let texto = botão.querySelectorAll("span");
+        if (curtiu === false) {
+            texto.textContent++;
+            curtiu = true;
+        } else{ 
+            texto.textContent--;
+            curtiu = false;
+        }
+      }
+    })
 </script>
 </html>
