@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
         header{
-            background-color: #183C63;
+            background-color: #084916;
             color: #FFFFFF;
             text-align: center;
             max-width: 800px;
@@ -18,7 +18,7 @@
         main{
 
             background-color: #FFFFFF;
-            color: #183C63;
+            color: #065f12;
             max-width: 800px;
             margin: 0 auto;
             padding: 16px;
@@ -53,6 +53,7 @@
         <h2>Minha primeira notícia</h2>
         <p class="artigo-autor">Por: Higor Schimit</p>
         <p>O Colégio Rural Estadual de Pinhalzinho, fica em uma comunidade no interior da cidade do Rio Bonito do Iguaçu no Paraná, Entre os trabalhos desenvolidos, destaca-se os indicies alcançados nos ultimos anos com IDEB, prova paraná e tambem a aprovação de alunos formados em diversos vestibulares do Estado.</p>
+        
     <button>❤️<span>0</span></button>
     <button> 👍🏽<span>0</span></button>
     <article>
@@ -60,10 +61,10 @@
 
 
      <div>
-     <h2>segundo poste</h2>
+     <h2>IDEB</h2>
 
      <p class="artigo-autor">Por: Higor Schimit</p>
-     <p>Aqui vou dar dicas de estudos </p>
+     <p>Pinhalzinho ficou em primeiro lugar no municipio de Rio Bonito do Iguaçu, com o IDEB de 74,0. O colegio vem ganhando fama no municipio por ser um colegio bom!</p>
 
      <button>❤️<span>0</span></button>
     <button> 👍🏽<span>0</span></button>
@@ -79,13 +80,13 @@
 </body>
 
 <script>
-    const botoẽs = document.querySelectorAll("button");
-    botoẽs.forEach(function(botão) { 
+    const botoes = document.querySelectorAll("button");
+    botoes.forEach(function(botao) { 
       let curtiu = false;
-      botão.addeEventlistener("click", botãoClicado);
-      function botãoClicado() {
+      botao.addEventListener("click", botaoClicado);
+      function botaoClicado() {
         console.log("fui clicado");
-        let texto = botão.querySelectorAll("span");
+        let texto = botao.querySelector("span");
         if (curtiu === false) {
             texto.textContent++;
             curtiu = true;
